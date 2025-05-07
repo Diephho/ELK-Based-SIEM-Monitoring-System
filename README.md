@@ -35,16 +35,40 @@ Chi tiết kiến trúc hệ thống tại [Sơ đồ kiến trúc và mô tả 
 
 ## Deployment
 
+Hướng dẫn triển khai hệ thống xem chi tiết tại [Deployment Guide](docs/deployment-guide.md)
+
 ## Demo Videos
 
 Xem các video minh họa hoạt động của hệ thống: https://drive.google.com/drive/folders/11oPinABcN_RSF0s3mgBEs7_I8LKQiLiN?usp=sharing
 
 | Feature    | Demo                                                         |
 |--------------|--------------------------------------------------------------|
-| Log Collection     | [![pfSense demo](demos/pfsense-demo-thumb.png)](demos/pfsense-demo.mp4) |
-| Log Ingestion & Parsing    | [![Snort demo](demos/snort-demo-thumb.png)](demos/snort-demo.mp4)       |
-| Searching & Investigation  | [![WAF demo](demos/waf-demo-thumb.png)](demos/waf-demo.mp4)             |
-| Detection & Alerting | [![Client demo](demos/client-demo-thumb.png)](demos/client-demo.mp4)   |
-| Visualization & Dashboard | [![Client demo](demos/client-demo-thumb.png)](demos/client-demo.mp4)   |
+| Log Collection     | Demo1+2_logcollection_&_logparsing.mp4 |
+| Log Ingestion & Parsing    | Demo1+2_logcollection_&_logparsing.mp4       |
+| Searching & Investigation  | Demo3_searchmodeule.mp4             |
+| Detection & Alerting | Demo4_detection&alert.mp4   |
+| Visualization & Dashboard | Demo5_Visualization&Dashboard.mp4   |
 
+## Results
+
+- **Log Ingestion Throughput**
+  - Trung bình 200-250 sự kiện/phút được đẩy vào Logstash và lưu trong Elasticsearch mà không bị mất gói. Trong đó, pfsense log chiếm phần lớn log với 50-100 sự kiện/phút, số lượng log còn lại phân bổ lần lượt ở snort, waf và client.
+![pfsense log ingestion throughput](media/pfsense_log_ingestion_throughput.png)
+
+- **Alert Latency**  
+  - Trung bình < 2 giây từ khi log vào Elasticsearch đến khi alert được kích hoạt và hiển thị trên Kibana.
+
+ 
+- **Detection Coverage**  
+  - Phát hiện thành công cuộc tấn công mô phỏng, dựa vào core rule set của waf trong đó có:
+    - Tấn công SQL Injection
+    - Tấn công Cross-Site Scripting (XSS)
+![detection xss](media/detection_xss.png)
+   
+## Hướng phát triển trong tương lai
+
+- **Cấu hình thêm nhiều dạng detection khác và kiểm thử một cách toàn diện hơn.**
+- **Tích hợp khả năng phản hồi khi có xuất hiện alert.**
+- **Tích hợp Threat Intelligent**
+- **Tích hợp Machine Learning**
 
