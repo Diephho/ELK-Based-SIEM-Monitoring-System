@@ -132,7 +132,7 @@ sudo systemctl start filebeat
 
 ## 6 Kiểm thử cơ bản
 - Gửi log mẫu (ping, web request, tấn công thử)
-- Mở **Kibana --> Discover**, kiếm tra các index pattern (pfsense-*, snort-*, modsec-*, winlog-*)
+- Mở **Kibana --> Discover**, kiếm tra các index pattern (`pfsense-*`, `snort-*`, `modsec-*`, `winlog-*`)
 - Thử truy vấn KQL, ví dụ: `event.dataset: "snort.alert"`
 
 ## 7 Thiết lập cảnh báo & Rules
