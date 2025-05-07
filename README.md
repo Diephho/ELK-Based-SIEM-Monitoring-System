@@ -33,3 +33,18 @@ Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ t
 ![Archtecture](media/network_topology.png)
 Chi tiết kiến trúc hệ thống tại [Sơ đồ kiến trúc và mô tả chi tiết](docs/architecture.md).
 
+## Deployment
+
+## Demo Videos
+
+Xem các video minh họa hoạt động của hệ thống: https://drive.google.com/drive/folders/11oPinABcN_RSF0s3mgBEs7_I8LKQiLiN?usp=sharing
+
+| Feature    | Demo                                                         |
+|--------------|--------------------------------------------------------------|
+| Log Collection     | [![pfSense demo](demos/pfsense-demo-thumb.png)](demos/pfsense-demo.mp4) |
+| Log Ingestion & Parsing    | [![Snort demo](demos/snort-demo-thumb.png)](demos/snort-demo.mp4)       |
+| Searching & Investigation  | [![WAF demo](demos/waf-demo-thumb.png)](demos/waf-demo.mp4)             |
+| Detection & Alerting | [![Client demo](demos/client-demo-thumb.png)](demos/client-demo.mp4)   |
+| Visualization & Dashboard | [![Client demo](demos/client-demo-thumb.png)](demos/client-demo.mp4)   |
+
+
