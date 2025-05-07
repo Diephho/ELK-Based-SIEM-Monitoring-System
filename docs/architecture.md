@@ -8,7 +8,7 @@
   - Host IDS (Snort): Giám sát lưu lượng nội bộ, phát hiện xâm nhập và các loại tấn công dựa trên mạng (network-based attacks)
   - Web Server (DVWA) có WAF (ModSecurity): Mô phỏng một hệ thống có lỗ hổng bằng DVWA, xây dựng WAF để bảo vệ ứng dụng web và gửi log audit
   - Windows Client: Endpoint, phát sinh system event log và application log
-- **[ELK Stack](README.MD):**
+- **[ELK Stack](../README.MD):**
   - Logstash
   - Elasticsearch
   - Kibana
