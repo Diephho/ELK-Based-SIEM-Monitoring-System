@@ -1,6 +1,6 @@
 # Infractructure Architecture
 
-![Sơ đồ kiến trúc](media/network_topology.png)
+![Sơ đồ kiến trúc](../media/network_topology.png)
 
 **1. Thành phần chính**:
 - **Mạng và thiết bị đầu cuối:**
