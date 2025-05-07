@@ -3,7 +3,7 @@
 Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ thống mạng nội bộ gồm các thiết bị an toàn mạng, web server và client. Mục tiêu chính là thu thập, xử lý, phân tích và giám sát nhật ký từ tường lửa pfSense, hệ thống IDS Snort, web server có ModSecurity WAF và máy Windows, nhằm phát hiện kịp thời các sự kiện bảo mật và trực quan hóa thông tin trong thời gian thực.
 
 ## Tổng quan về ELK Stack
-<Hình>
+![Overview](overview.png)
 
 **1. Elasticsearch:**
   - Công cụ tìm kiếm và phân tích: Lưu trữ dữ liệu dưới dạng JSON trong các index, cho phép truy vấn full-text, hỗ trợ phân tích số liệu
@@ -25,7 +25,11 @@ Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ t
 - Visualization & Reporting: Trực quan hóa bằng dashboard
 - Documentations: Sơ đồ kiến trúc, hướng dẫn triển khai từng thành phần và báo cáo tổng kết kết quả, bài học kinh nghiệm, định hướng phát triển
 
-## Kiến trúc tổng quan
-<Hình>
+## Tech stack & Kiến trúc tổng quan
+
+**Tech stack**
+![techstack](media/tech_stack.png)
+
+![Archtecture](media/network_topology.png)
 Chi tiết kiến trúc hệ thống tại [Sơ đồ kiến trúc và mô tả chi tiết](docs/architecture.md).
 
