@@ -113,7 +113,23 @@ Start-Service winlogbeat
   - [logstash.yml](configs/logstash/logstash.yml)
   - [kibana.yml](configs/kibana/kibana.yml)
 - Để hiển thị Index Pattern lên Kibana Discover, vào Home > Management > Stack Management > Add Index Pattern, nhập Index Pattern muốn hiển thị, nếu có nó sẽ xuất hiện, chọn trường @timestamp.
-- 
+
+### 5.6 Filebeat
+
+- Cài Filebeat trên Linux (Ví dụ máy ELK, máy Ubuntu Snort, máy Ubuntu Web Server...)
+```bash
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.17.0-amd64.deb
+sudo dpkg -i filebeat-7.17.0-amd64.deb
+sudo systemctl enable filebeat
+```
+
+- Cấu hình `filebeat.yml`: [filebeat.yml](configs/filebeat/filebeat.yml)
+
+- Khởi động Filebeat:
+```bash
+sudo systemctl start filebeat
+```
+
 ## 6 Kiểm thử cơ bản
 - Gửi log mẫu (ping, web request, tấn công thử)
 - Mở **Kibana --> Discover**, kiếm tra các index pattern (pfsense-*, snort-*, modsec-*, winlog-*)
