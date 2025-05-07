@@ -50,7 +50,7 @@
 **3.5 Logstash:** logstash.conf
 
 **3.6 Elasticsearch & Kibana**
-  - Tạo Index Pattern: pfsense-*, snort-*, modsec-*, winlog-*
+  - Tạo Index Pattern: `pfsense-*`, `snort-*`, `modsec-*`, `winlog-*`
   - Xây dựng dashboard
 
    
