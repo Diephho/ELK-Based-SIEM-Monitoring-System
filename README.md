@@ -4,11 +4,14 @@ Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ t
 
 ## Tổng quan về ELK Stack
 <Hình>
+
 **1. Elasticsearch:**
   - Công cụ tìm kiếm và phân tích: Lưu trữ dữ liệu dưới dạng JSON trong các index, cho phép truy vấn full-text, hỗ trợ phân tích số liệu
+
 **2. Logstash:**
   - Trạm trung chuyển dữ liệu: Nhận dữ liệu từ nhiều nguồn (file log, syslog, FileBeat, database...), xử lý và chuyển tiếp dữ liệu.
   - Pipeline: Gồm 3 giai đoạn - input (nhận dữ liệu đầu vào), filter (parse, gắn thẻ...) và output (đẩy dữ liệu tới Elasticsearch hoặc nơi khác)
+
 **3. Kibana:**
   - Giao diện trực quan: Cho phép xây dựng dashboard, biểu đồ (line, bar, pie, maps...) và report dựa trên dữ liệu trong Elasticsearch
   - Khám phá dữ liệu: Tìm kiếm, lọc và phân tích log/event theo thời gian thực
