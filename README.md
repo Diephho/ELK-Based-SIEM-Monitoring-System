@@ -43,11 +43,11 @@ Xem các video minh họa hoạt động của hệ thống: [Video Demo](https:
 
 | Feature    | Demo                                                         |
 |--------------|--------------------------------------------------------------|
-| Log Collection     | Demo1+2_logcollection_&_logparsing.mp4 |
-| Log Ingestion & Parsing    | Demo1+2_logcollection_&_logparsing.mp4       |
-| Searching & Investigation  | Demo3_searchmodeule.mp4             |
-| Detection & Alerting | Demo4_detection&alert.mp4   |
-| Visualization & Dashboard | Demo5_Visualization&Dashboard.mp4   |
+| Log Collection     | [Demo1+2](https://youtu.be/8kT6JZoJT3c) |
+| Log Ingestion & Parsing    | [Demo1+2](https://youtu.be/8kT6JZoJT3c)      |
+| Searching & Investigation  | [Demo3](https://youtu.be/zlhBIX8wMSs)            |
+| Detection & Alerting | [Demo4](https://youtu.be/Nf-PxvZqffA)   |
+| Visualization & Dashboard | [Demo5](https://youtu.be/veM75JVKq1Q)   |
 
 ## Kết quả đạt được
 
