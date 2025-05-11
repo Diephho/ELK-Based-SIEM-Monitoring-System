@@ -39,7 +39,7 @@ Hướng dẫn triển khai hệ thống xem chi tiết tại [Deployment Guide]
 
 ## Demo Videos
 
-Xem các video minh họa hoạt động của hệ thống: https://drive.google.com/drive/folders/11oPinABcN_RSF0s3mgBEs7_I8LKQiLiN?usp=sharing
+Xem các video minh họa hoạt động của hệ thống: [Video Demo](https://drive.google.com/drive/folders/11oPinABcN_RSF0s3mgBEs7_I8LKQiLiN?usp=sharing)
 
 | Feature    | Demo                                                         |
 |--------------|--------------------------------------------------------------|
