@@ -49,7 +49,7 @@ Xem các video minh họa hoạt động của hệ thống: [Video Demo](https:
 | Detection & Alerting | Demo4_detection&alert.mp4   |
 | Visualization & Dashboard | Demo5_Visualization&Dashboard.mp4   |
 
-## Results
+## Kết quả đạt được
 
 - **Log Ingestion Throughput**
   - Trung bình 200-250 sự kiện/phút được đẩy vào Logstash và lưu trong Elasticsearch mà không bị mất gói. Trong đó, pfsense log chiếm phần lớn log với 50-100 sự kiện/phút, số lượng log còn lại phân bổ lần lượt ở snort, waf và client.
