@@ -1,1 +1,9 @@
-
+# /etc/snort/rules/local.rules
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+alert icmp any any -> $HOME_NET any (msg:"ICMP test diepcongtest"; sid:10000001; rev:001;)
+alert tcp any any -> any 9000 (msg:"[IDS] HTTP request detected"; sid:1000002; rev:1;)
