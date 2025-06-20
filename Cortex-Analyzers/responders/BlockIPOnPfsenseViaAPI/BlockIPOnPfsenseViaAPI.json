@@ -1,0 +1,42 @@
+{
+  "name": "BlockIPOnPfSenseViaAPI",
+  "version": "1.0",
+  "author": "Diep Cong",
+  "url": "https://github.com/Diephho/ELK-Based-SIEM-Monitoring-System/tree/main/Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI",
+  "license": "Good Luck!",
+  "description": "Block an IP address in pfSense via REST API",
+  "dataTypeList": ["thehive:case_artifact"],
+  "command": "BlockIPOnPfsenseViaAPI/BlockIPResponderViaAPI.py",
+  "baseConfigPath": "BlockIPOnPfsenseViaAPI",
+  "acceptTLP": ["WHITE", "GREEN", "AMBER", "RED"],
+  "configurationItems": [
+    {
+      "name": "pfsense_url",
+      "description": "URL of pfSense (e.g. https://192.168.142.128)",
+      "type": "string",
+      "required": true,
+      "defaultValue": "https://192.168.142.128"
+    },
+    {
+      "name": "username",
+      "description": "Username to authenticate to pfSense",
+      "type": "string",
+      "required": true,
+      "defaultValue": "admin"
+    },
+    {
+      "name": "password",
+      "description": "Password to authenticate to pfSense",
+      "type": "string",
+      "required": true,
+      "defaultValue": "pfsense"
+    },
+    {
+      "name": "alias_name",
+      "description": "Name of the alias to add blocked IPs to (e.g. AutoBlocked)",
+      "type": "string",
+      "required": true,
+      "defaultValue": "AutoBlocked"
+    }
+  ]
+}
