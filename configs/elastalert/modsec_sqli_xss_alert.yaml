@@ -1,0 +1,55 @@
+name: Detect SQLi and XSS Attacks from ModSecurity
+type: any
+
+index: modsec-logs-*
+
+filter:
+  - query:
+      query_string:
+        query: >
+          message:("SELECT" AND "FROM") OR
+          message:("UNION SELECT") OR
+          message:("<script>") OR
+          message:(" OR " AND "1=1") OR
+          message:("XSS") OR
+          message:("SQL Injection") OR
+          modsec_fields.msg:("SQL Injection" OR "XSS")
+
+alert: hivealerter
+
+hive_connection:
+  hive_host: http://192.168.142.129
+  hive_port: 9000
+  hive_apikey: Xa5ji679eq9cAKpIHZEom/hEWN2O51dh
+  hive_proxies:
+    http: ''
+    https: ''
+
+hive_alert_config:
+  title: '🚨 SQLi/XSS Attack from {}'
+  title_args: [ host.hostname ]
+  description: '{0} : {1}'
+  description_args: [ host.ip, message ]
+  severity: 2
+  status: 'New'
+  source: 'waf-{}'
+  source_args: [ host.hostname ]
+  type: 'modsec-attack'
+  tlp: 2
+  pap: 2
+  follow: True
+  tags: ['modsecurity', 'waf', 'sqli', 'xss']
+  customFields:
+    - name: attack_type
+      type: string
+      value: 'SQLi/XSS'
+
+hive_observable_data_mapping:
+  - ip: host.ip
+    tlp: 2
+    tags: ['source-ip']
+    message: 'Source IP of attacker'
+  - domain: host.hostname
+    tlp: 1
+    tags: ['host']
+    message: 'Host where WAF is running'
