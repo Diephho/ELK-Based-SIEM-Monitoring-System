@@ -123,7 +123,7 @@ Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ t
   ![cortex virustotal](media/analyzer_virustotal.png)
   ![cortex virustotal report](media/report_virustotal.png)
   - Nếu kết quả cho thấy IP nguy hiểm, Cortex sẽ gọi responder để block IP attacker bằng REST API trên pfSense.
-    - Tạo Custom Responder: ![BlockIPOnPfsenseViaAPI](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI).
+    - Tạo Custom Responder: [BlockIPOnPfsenseViaAPI](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI).
   ![pfsense report](media/report_responder.png)
   ![pfsense result](media/responder_in_pfsense.png)
 
