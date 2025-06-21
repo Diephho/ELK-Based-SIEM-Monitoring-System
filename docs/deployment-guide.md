@@ -315,10 +315,12 @@ Sau đó, để tạo User và thiết lập cortex as observer và analyzer, c�
 
 - Truy cập: `http://<IP>:9001`
 - Tạo một Organization trên Cortex > Tạo User trên Cortex > Chọn Rule cho User (read/analyzer/orgadmin) và đặt mật khẩu cho user > Tạo API Key User
-- Đăng nhập vào TheHive bằng tài khoản User và enable một vài analyzer (VirusTotal)
+- Đăng nhập vào TheHive bằng tài khoản User và enable một vài analyzer (VirusTotal) và responder
 - Tạo Connector trên TheHive: Platform Management > Connector > nhập Server url là url của Cortex > lấy API Key đã tạo của User khi nãy đưa vào trường API Key (mục đích ở đây là TheHive gọi responder thông qua User có quyền trên Cortex) > Tiến hành Test và Add this server để hoàn tất thiết lập Connector
 
 Sau khi hoàn tất thiết lập xong, ta có thể tự tạo một Case Management và thiết lập thủ công Analyzer một số observables để kiểm tra: tạo case với IP 8.8.8.8, chọn `...` để mở rộng > chọn Run Analyzer > chọn Analyzer (ví dụ VirusTotal).
+
+
 
 ### 8.5 Tạo Custom Responder (Block IP via REST API pfSense)
 
@@ -345,6 +347,9 @@ Có thể tham khảo:
 - [BlockIPOnPfsenseViaAPI.py](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.py)
 
 - [requirement.txt](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/requirement.txt)
+
+Nếu tạo thành công, service sẽ hiển thị trên Cortex, sau đó chỉ cần enable và sử dụng
+![responders](media/responders.png)
 
 ### 8.6 Quá trình phân tích và chặn IP độc hại
 

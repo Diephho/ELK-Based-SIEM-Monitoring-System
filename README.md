@@ -121,7 +121,7 @@ Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ t
   ![thehive alert](media/alert_in_thehive.png)
   - Cortex được kích hoạt để phân tích IP qua VirusTotal.
   ![cortex virustotal](media/analyzer_virustotal.png)
-  ![cortex virustotal report](media/report_virustotal.png)
+
   - Nếu kết quả cho thấy IP nguy hiểm, Cortex sẽ gọi responder để block IP attacker bằng REST API trên pfSense.
     - Tạo Custom Responder: [BlockIPOnPfsenseViaAPI](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI).
   ![pfsense report](media/report_responder.png)
