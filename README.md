@@ -46,6 +46,7 @@ Hướng dẫn triển khai hệ thống xem chi tiết tại [Deployment Guide]
 | Searching & Investigation  | [Demo3](https://youtu.be/zlhBIX8wMSs)            |
 | Detection & Alerting | [Demo4](https://youtu.be/Nf-PxvZqffA)   |
 | Visualization & Dashboard | [Demo5](https://youtu.be/veM75JVKq1Q)   |
+| SOAR | [Demo5](https://youtu.be/CYYGcL4dJtw)   |
 
 ## Kết quả đạt được
 
