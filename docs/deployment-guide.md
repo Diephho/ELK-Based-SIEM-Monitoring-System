@@ -165,7 +165,7 @@ cp config.yaml.example config.yaml
 
 Cấu hình `config.yaml`
 
-Tạo thư mục `rules/` và một file rule mẫu [modsec_sqli_xss_alert.yaml](../detection_rules/elastalert/sqli_xss_rule.yaml)
+Tạo thư mục `rules/` và một file rule mẫu [sqli_xss_rule.yaml](../detection_rules/elastalert/sqli_xss_rule.yaml)
 
 ```yaml
 name: Detect SQLi and XSS Attacks from ModSecurity
