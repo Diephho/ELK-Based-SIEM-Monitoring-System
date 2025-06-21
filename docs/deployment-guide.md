@@ -15,6 +15,8 @@ Mục tiêu tài liệu này là cung cấp các bước chi tiết để cài �
 
 Sau khi hoàn thành, hệ thống sẽ thu thập, parse, lưu trữ và trực quan hóa log, đồng thời thiết lập cảnh báo theo rule.
 
+Phần mở rộng: thiết kế **TheHive** và **Cortex** để thực hiện phản hồi khi có sự kiện tấn công
+
 ---
 
 ## 2. Yêu cầu cơ bản
