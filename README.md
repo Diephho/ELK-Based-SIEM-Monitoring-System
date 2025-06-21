@@ -3,14 +3,12 @@
 ---
 
 ## ❗ Pain Points và Động lực phát triển hệ thống
-### Pain Points:
+### 💢 Pain Points:
 - **Cảnh báo sai (false positive)** xảy ra nhiều khi chỉ dựa vào rule-based detection.
 - **Thiếu khả năng phản hồi tự động** khiến việc xử lý sự kiện mất thời gian, dễ bỏ sót.
 - **Khó mở rộng** và cấu hình thu thập log từ nhiều nguồn nếu không có cấu trúc pipeline rõ ràng.
 
----
-
-## 🎯 Mục tiêu
+### 🎯 Mục tiêu
 Xây dựng hệ thống SIEM để dễ dàng quản lý log trong một hệ thống mạng nội bộ gồm các thiết bị an toàn mạng, web server và client. Mục tiêu chính là thu thập, xử lý, phân tích và giám sát nhật ký từ tường lửa pfSense, hệ thống IDS Snort, web server có ModSecurity WAF và máy Windows, nhằm phát hiện kịp thời các sự kiện bảo mật và trực quan hóa thông tin trong thời gian thực.
 
 ➡️ Mở rộng: phản hồi sự kiện thông qua tích hợp SOAR (TheHive + Cortex)
