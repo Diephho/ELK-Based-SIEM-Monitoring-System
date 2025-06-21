@@ -12,6 +12,9 @@
   - Logstash
   - Elasticsearch
   - Kibana
+- **TheHive & Cortex (SOAR):**
+  - TheHive: tiếp nhận alert từ ElastAlert, tổ chức điều tra qua các case.
+  - Cortex: thực thi các hành động phân tích (analyzer như VirusTotal) và phản hồi (responder như chặn IP qua pfSense REST API).
 
 **2. Sơ đồ Luồng Dữ liệu**
 - Thu thập log từ pfSense, Snort, ModSecurity, Windows Client. Trong đó pfSense gửi bằng syslog, Snort và ModSecurity gửi log thông qua FileBeat, Windows Client gửi log thông qua WinLogBeat
@@ -26,6 +29,14 @@
   - Discover: Tìm kiếm và khảo sát log raw
   - Dashboards: Hiển thị lưu lượng, cảnh báo
   - Alerts: Thiết lập rule trigger qua Elastic Security
+- ElastAlert:
+  - Theo dõi log trong Elasticsearch, phát hiện pattern đáng ngờ và gửi alert đến TheHive qua API.
+- TheHive:
+  - Tạo case điều tra, lưu các artifact như IP/Hash/Domain từ alert.
+  - Cho phép phân tích và gán mức độ nguy hiểm.
+- Cortex:
+  - Khi được kích hoạt từ TheHive, Cortex thực hiện analyzer (VD: kiểm tra IP qua VirusTotal)
+  - Nếu kết quả xác định IP độc hại, Cortex có thể gọi responder như chặn IP trên pfSense qua REST API
 
 **3. Chi tiết mỗi thành phần:**
 
@@ -53,6 +64,12 @@
   - Tạo Index Pattern: `pfsense-*`, `snort-*`, `modsec-*`, `winlog-*`
   - Xây dựng dashboard
 
+**3.7 TheHive & Cortex (SOAR)**
+  - ElastAlert gửi cảnh báo từ log tấn công (ví dụ SQLi, XSS từ ModSecurity) đến TheHive.
+  - TheHive nhận alert và tạo case điều tra, sinh observable như IP nguồn.
+  - Cortex thực thi analyzer như VirusTotal để kiểm tra độ nguy hiểm của IP.
+  - Nếu IP được đánh giá độc hại, Cortex gọi responder thực hiện block IP thông qua REST API pfSense.
+  - Luồng phản hồi khép kín từ phát hiện → điều tra → phản ứng giúp giảm thời gian xử lý và nâng cao tính tự động hóa trong hệ thống SIEM.
    
 
   
