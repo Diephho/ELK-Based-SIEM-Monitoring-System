@@ -222,7 +222,28 @@ hive_observable_data_mapping:
     message: 'Host where WAF is running'
 ```
 
+Kiểm tra bằng lệnh
+
+```bash
+elastalert-test-rule \
+  --config /opt/elastalert/config/config.yaml \
+  /opt/elastalert/rules/sqli_xss_rule.yaml
+```
+
 Khởi chạy ElastAlert
+
+```bash
+systemctl start elastalert
+```
+
+hoặc
+
+```bash
+elastalert \
+  --config /opt/elastalert/config/config.yaml \
+  --rule /opt/elastalert/rules/sqli_xss_rule.yaml \
+  --verbose
+```
 
 ### 8.2 Cài đặt gói REST API cho pfSense
 
