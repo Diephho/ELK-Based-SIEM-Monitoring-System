@@ -1,0 +1,11 @@
+{
+  "name": "VirusTotal_GetReport_3_1",
+  "version": "3.1",
+  "author": "TheHive Project",
+  "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
+  "license": "AGPL-V3",
+  "description": "Get information from VirusTotal for a given hash",
+  "dataTypeList": ["hash"],
+  "command": "python3 virustotal.py VirusTotal_GetReport.json",
+  "baseConfig": "/opt/Cortex-Analyzers/analyzers/VirusTotal_GetReport_3_1/api_key.json"
+}
