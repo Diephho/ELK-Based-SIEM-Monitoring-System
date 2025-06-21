@@ -126,7 +126,8 @@ sudo dpkg -i filebeat-7.17.0-amd64.deb
 sudo systemctl enable filebeat
 ```
 
-- Cấu hình `filebeat.yml`: [filebeat.yml](../configs/filebeat/filebeat.yml)
+- Cấu hình `filebeat.yml` cho snort: [filebeat.yml](../configs/snort/filebeat.yml)
+- Cấu hình `filebeat.yml` cho WAF: [filebeat.yml](../configs/webserver/filebeat.yml)
 
 - Khởi động Filebeat:
 ```bash
