@@ -1,6 +1,7 @@
 # Deployment Guide
 
 Hướng dẫn triển khai giải pháp SIEM dựa trên ELK Stack kết hợp pfSense, Snort, ModSecurity và Windows Client.
+Mở rộng triển khai phản hồi qua TheHive + Cortex 
 
 ---
 
@@ -13,6 +14,8 @@ Mục tiêu tài liệu này là cung cấp các bước chi tiết để cài �
 - **Windows Client** với Winlogbeat
 
 Sau khi hoàn thành, hệ thống sẽ thu thập, parse, lưu trữ và trực quan hóa log, đồng thời thiết lập cảnh báo theo rule.
+
+Phần mở rộng: thiết kế **TheHive** và **Cortex** để thực hiện phản hồi khi có sự kiện tấn công
 
 ---
 
@@ -221,7 +224,28 @@ hive_observable_data_mapping:
     message: 'Host where WAF is running'
 ```
 
+Kiểm tra bằng lệnh
+
+```bash
+elastalert-test-rule \
+  --config /opt/elastalert/config/config.yaml \
+  /opt/elastalert/rules/sqli_xss_rule.yaml
+```
+
 Khởi chạy ElastAlert
+
+```bash
+systemctl start elastalert
+```
+
+hoặc
+
+```bash
+elastalert \
+  --config /opt/elastalert/config/config.yaml \
+  --rule /opt/elastalert/rules/sqli_xss_rule.yaml \
+  --verbose
+```
 
 ### 8.2 Cài đặt gói REST API cho pfSense
 
