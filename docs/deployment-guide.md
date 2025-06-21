@@ -342,9 +342,9 @@ sudo chmod +x /opt/cortex/Cortex-Analyzers/analyzers/*/*/*.py
 
 Có thể tham khảo:
 
-- [BlockIPOnPfsenseViaAPI.json](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.json)
+- [BlockIPOnPfsenseViaAPI.json](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfsenseViaAPI.json)
 
-- [BlockIPOnPfsenseViaAPI.py](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.py)
+- [BlockIPOnPfsenseViaAPI.py](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfsenseViaAPI.py)
 
 - [requirement.txt](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/requirement.txt)
 
