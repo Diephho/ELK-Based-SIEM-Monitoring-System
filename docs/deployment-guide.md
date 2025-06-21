@@ -192,10 +192,10 @@ hive_connection:
     https: ''
 
 hive_alert_config:
-  title: '🚨 SQLi/XSS Attack from {}'
+  title: 'SQLi/XSS Attack from {}'
   title_args: [ host.hostname ]
   description: '{0} : {1}'
-  description_args: [ host.ip, message ]
+  description_args: [ source.ip, message ]
   severity: 2
   status: 'New'
   source: 'waf-{}'
@@ -211,7 +211,7 @@ hive_alert_config:
       value: 'SQLi/XSS'
 
 hive_observable_data_mapping:
-  - ip: host.ip
+  - ip: source.ip
     tlp: 2
     tags: ['source-ip']
     message: 'Source IP of attacker'
