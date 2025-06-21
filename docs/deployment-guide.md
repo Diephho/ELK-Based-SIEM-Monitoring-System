@@ -1,6 +1,7 @@
 # Deployment Guide
 
 Hướng dẫn triển khai giải pháp SIEM dựa trên ELK Stack kết hợp pfSense, Snort, ModSecurity và Windows Client.
+Mở rộng triển khai phản hồi qua TheHive + Cortex 
 
 ---
 
