@@ -112,9 +112,9 @@ Start-Service winlogbeat
 ### 5.5 ELK Stack
 
 - Tham khảo các file cáu hình:
-  - [elasticsearch.yml](configs/elasticsearch/elasticsearch.yml)
-  - [logstash.yml](configs/logstash/logstash.yml)
-  - [kibana.yml](configs/kibana/kibana.yml)
+  - [elasticsearch.yml](../configs/elasticsearch/elasticsearch.yml)
+  - [logstash.yml](../configs/logstash/logstash.yml)
+  - [kibana.yml](../configs/kibana/kibana.yml)
 - Để hiển thị Index Pattern lên Kibana Discover, vào Home > Management > Stack Management > Add Index Pattern, nhập Index Pattern muốn hiển thị, nếu có nó sẽ xuất hiện, chọn trường @timestamp.
 
 ### 5.6 Filebeat
@@ -126,7 +126,7 @@ sudo dpkg -i filebeat-7.17.0-amd64.deb
 sudo systemctl enable filebeat
 ```
 
-- Cấu hình `filebeat.yml`: [filebeat.yml](configs/filebeat/filebeat.yml)
+- Cấu hình `filebeat.yml`: [filebeat.yml](../configs/filebeat/filebeat.yml)
 
 - Khởi động Filebeat:
 ```bash
@@ -164,7 +164,7 @@ cp config.yaml.example config.yaml
 
 Cấu hình `config.yaml`
 
-Tạo thư mục `rules/` và một file rule mẫu [modsec_sqli_xss_alert.yaml](detection_rules/elastalert/sqli_xss_rule.yaml)
+Tạo thư mục `rules/` và một file rule mẫu [modsec_sqli_xss_alert.yaml](../detection_rules/elastalert/sqli_xss_rule.yaml)
 
 ```yaml
 name: Detect SQLi and XSS Attacks from ModSecurity
@@ -342,14 +342,14 @@ sudo chmod +x /opt/cortex/Cortex-Analyzers/analyzers/*/*/*.py
 
 Có thể tham khảo:
 
-- [BlockIPOnPfsenseViaAPI.json](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.json)
+- [BlockIPOnPfsenseViaAPI.json](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.json)
 
-- [BlockIPOnPfsenseViaAPI.py](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.py)
+- [BlockIPOnPfsenseViaAPI.py](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/BlockIPOnPfSenseViaAPI.py)
 
-- [requirement.txt](Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/requirement.txt)
+- [requirement.txt](../Cortex-Analyzers/responders/BlockIPOnPfsenseViaAPI/requirement.txt)
 
 Nếu tạo thành công, service sẽ hiển thị trên Cortex, sau đó chỉ cần enable và sử dụng
-![responders](media/responders.png)
+![responders](../media/responders.png)
 
 ### 8.6 Quá trình phân tích và chặn IP độc hại
 
