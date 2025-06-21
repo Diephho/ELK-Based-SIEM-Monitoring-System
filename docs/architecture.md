@@ -30,7 +30,7 @@
   - Dashboards: Hiển thị lưu lượng, cảnh báo
   - Alerts: Thiết lập rule trigger qua Elastic Security
 - ElastAlert:
-  - Theo dõi log trong Elasticsearch, phát hiện pattern đáng ngờ và gửi alert đến TheHive qua API.
+  - Theo dõi log trong Elasticsearch, phát hiện pattern đáng ngờ và gửi alert đến TheHive qua rule (API/POST/Webhook/...).
 - TheHive:
   - Tạo case điều tra, lưu các artifact như IP/Hash/Domain từ alert.
   - Cho phép phân tích và gán mức độ nguy hiểm.
