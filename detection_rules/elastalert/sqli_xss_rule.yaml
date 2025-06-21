@@ -1,4 +1,4 @@
-# /opt/elastalert/rules/modsec_sqli_xss_alert.yaml
+# /opt/elastalert/rules/sqli_xss_rule.yaml
 name: Detect SQLi and XSS Attacks from ModSecurity
 type: any
 
